@@ -17,6 +17,13 @@ router.delete('/organization/:id',  organizationController.delete);
 // USER
 // -------------------------------------------------------
 router.post('/user',  userController.create);
+router.get('/users', userController.getAll);
+router.put('/user/:id', userController.update); // 1
+router.delete('/user/:id', userController.delete); // 2
+
+router.get('orguser/:id', userController.getUserOrg); // 3
+
+router.get('users/org/:id', userController.getByTitle); // 3.a
 
 // -------------------------------------------------------
 // Homework

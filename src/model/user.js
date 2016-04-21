@@ -26,6 +26,10 @@ module.exports = function (sequelize, DataTypes) {
                 notEmpty: true,
                 len: [2, 100]
             }
+        },
+        OrganizationId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
 
